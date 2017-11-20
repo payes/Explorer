@@ -15,7 +15,7 @@ spec:
           imagePullPolicy: IfNotPresent 
           image: payes/cstor:latest
           command: ["/bin/bash"]
-          args: [ "-c", "chmod +x /init.sh; /init.sh volname=cstor1_vol path=/tmp/cstor size=8g"]
+          args: [ "-c", "chmod +x /init.sh; /init.sh volname=cstor1_vol path=/tmp/cstor size=8g clusterIP=192.168.0.10"]
           ports:
             - containerPort: 3260
               name: iscsi
